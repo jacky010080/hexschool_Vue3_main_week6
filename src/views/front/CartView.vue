@@ -75,6 +75,9 @@ export default {
         .then(res => {
           this.cart = res.data.data
         })
+        .catch(err => {
+          alert(err.response.data.message)
+        })
     },
     updateProductQty (item) {
       const data = {

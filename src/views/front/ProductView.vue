@@ -19,6 +19,9 @@ export default {
         .then(res => {
           this.product = res.data.product
         })
+        .catch(err => {
+          alert(err.response.data.message)
+        })
     }
   },
   mounted () {

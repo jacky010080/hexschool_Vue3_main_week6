@@ -33,6 +33,9 @@ export default {
         .then(res => {
           this.products = res.data.products
         })
+        .catch(err => {
+          alert(err.response.data.message)
+        })
     },
     addToCart (id) {
       const data = {
@@ -43,6 +46,9 @@ export default {
         .then(res => {
           alert(res.data.message)
           console.log(res)
+        })
+        .catch(err => {
+          alert(err.response.data.message)
         })
     }
   },
